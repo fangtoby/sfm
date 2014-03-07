@@ -10,4 +10,6 @@
 
 @interface QFViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *sourceStatus;
+-(void)refreshStatusLabel:(NSNotification *)notification;
 @end

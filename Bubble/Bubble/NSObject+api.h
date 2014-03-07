@@ -1,5 +1,5 @@
 //
-//  NSObject+param.h
+//  NSObject+api.h
 //  Bubble
 //
 //  Created by 方燕良 on 3/7/14.
@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#define SERVER_URL @"http://192.168.2.135:8004"
+@interface Api:NSObject
 
-@interface  Param : NSObject
+-(NSMutableDictionary *)rootApiCall:(NSString *) location;
+
+-(NSMutableDictionary *)apiGetWordList;
 
 @end

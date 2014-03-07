@@ -10,4 +10,14 @@
 
 @interface Util:NSObject
 
+-(NSString *)getUuid;
+
+-(NSString *)getDocumentsPath:(NSString *)fileName;
+
+-(BOOL)fileExist:(NSString *) path;
+
+-(BOOL)writeToFile:(NSMutableDictionary *) mdic fileName:(NSString *) fileName;
+
+-(NSMutableDictionary *)getLocalDataByName:(NSString *) fileName;
+
 @end

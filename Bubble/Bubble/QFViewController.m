@@ -17,7 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshStatusLabel:) name:@"NotificationRefreshStatus" object:Nil];
+	
+}
+-(void)refreshStatusLabel:(NSNotification *) notification
+{
+	[self.sourceStatus setText:[notification object]];
 }
 
 - (void)didReceiveMemoryWarning
