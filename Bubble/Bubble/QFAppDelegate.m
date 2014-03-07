@@ -7,15 +7,49 @@
 //
 
 #import "QFAppDelegate.h"
+#import "NSObject+util.h"
+#import "NSObject+api.h"
+
 
 @implementation QFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//	[self getData];
+	dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		
+		if ([self getData]) {
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshStatus" object:@"Success."];
+			});
+		}
+		
+	});
     return YES;
 }
-							
+
+-(BOOL)getData
+{
+	Api *api = [Api alloc];
+	Util *util = [Util alloc];
+	NSString *fileName = @"word.plist";
+	sleep(5);
+	NSMutableDictionary *data;
+	
+	if ([util fileExist:[util getDocumentsPath:fileName]]) {
+		data = [util getLocalDataByName:fileName];
+		NSLog(@"local data : %@",data);
+	}else{
+		data = [api apiGetWordList];
+		if ([util writeToFile:data fileName:fileName]) {
+			NSLog(@"loc data: %@",[util getLocalDataByName:fileName]);
+		}else{
+			NSLog(@"wirte local error , net data: %@",data);
+		}
+	}
+	return YES;
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
