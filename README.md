@@ -1,7 +1,7 @@
 sfm
 ===
 
-Self Financial Management
+Self Financial Management System
 
 Author: HonestLies
 
