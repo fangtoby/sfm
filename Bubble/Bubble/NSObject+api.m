@@ -12,15 +12,15 @@
 
 @implementation Api
 
--(NSMutableDictionary *) rootApiCall:(NSString *) location
+-(NSDictionary *) rootApiCall:(NSString *) location
 {
-	NSMutableDictionary *dic = [NSMutableDictionary alloc];
+	NSDictionary *dic = [NSDictionary alloc];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",SERVER_URL,location]];
-	dic = [[NSMutableDictionary alloc] initWithContentsOfURL:url];
+	dic = [[NSDictionary alloc] initWithContentsOfURL:url];
 	return dic;
 }
 
--(NSMutableDictionary *) apiGetWordList
+-(NSDictionary *) apiGetWordList
 {
 	return [self rootApiCall:@"data/word.plist"];
 }

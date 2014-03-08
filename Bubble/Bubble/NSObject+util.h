@@ -16,8 +16,8 @@
 
 -(BOOL)fileExist:(NSString *) path;
 
--(BOOL)writeToFile:(NSMutableDictionary *) mdic fileName:(NSString *) fileName;
+-(BOOL)writeToFile:(NSDictionary *) mdic fileName:(NSString *) fileName;
 
--(NSMutableDictionary *)getLocalDataByName:(NSString *) fileName;
+-(NSDictionary *)getLocalDataByName:(NSString *) fileName;
 
 @end

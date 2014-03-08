@@ -10,10 +10,11 @@
 		A85F903818C98F6000E4A236 /* NSObject+param.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F903718C98F6000E4A236 /* NSObject+param.m */; };
 		A85F903B18C98FBD00E4A236 /* NSObject+util.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F903A18C98FBD00E4A236 /* NSObject+util.m */; };
 		A85F903E18C9A08600E4A236 /* NSObject+api.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F903D18C9A08600E4A236 /* NSObject+api.m */; };
+		A8B81AE218CB0461007E6E8C /* QFPlistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B81AE118CB0461007E6E8C /* QFPlistTableViewController.m */; };
+		A8BB2C9518CA256E00E7C417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8BB2C9718CA256E00E7C417 /* Localizable.strings */; };
 		A8BFE82F18C96ACA002853CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BFE82E18C96ACA002853CD /* Foundation.framework */; };
 		A8BFE83118C96ACA002853CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BFE83018C96ACA002853CD /* CoreGraphics.framework */; };
 		A8BFE83318C96ACA002853CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BFE83218C96ACA002853CD /* UIKit.framework */; };
-		A8BFE83918C96ACA002853CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8BFE83718C96ACA002853CD /* InfoPlist.strings */; };
 		A8BFE83B18C96ACA002853CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BFE83A18C96ACA002853CD /* main.m */; };
 		A8BFE83F18C96ACA002853CD /* QFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BFE83E18C96ACA002853CD /* QFAppDelegate.m */; };
 		A8BFE84218C96ACA002853CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BFE84018C96ACA002853CD /* Main.storyboard */; };
@@ -43,17 +44,24 @@
 		A85F903A18C98FBD00E4A236 /* NSObject+util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+util.m"; sourceTree = "<group>"; };
 		A85F903C18C9A08600E4A236 /* NSObject+api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+api.h"; sourceTree = "<group>"; };
 		A85F903D18C9A08600E4A236 /* NSObject+api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+api.m"; sourceTree = "<group>"; };
+		A8B81AE018CB0461007E6E8C /* QFPlistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFPlistTableViewController.h; sourceTree = "<group>"; };
+		A8B81AE118CB0461007E6E8C /* QFPlistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFPlistTableViewController.m; sourceTree = "<group>"; };
+		A8BB2C7F18CA20A000E7C417 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8BB2C8F18CA24C800E7C417 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		A8BB2C9218CA24C800E7C417 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A8BB2C9618CA256E00E7C417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A8BB2C9818CA257F00E7C417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A8BB2C9918CA258000E7C417 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A8BB2C9A18CAEE1200E7C417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8BFE82B18C96ACA002853CD /* Bubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BFE82E18C96ACA002853CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8BFE83018C96ACA002853CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A8BFE83218C96ACA002853CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A8BFE83618C96ACA002853CD /* Bubble-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bubble-Info.plist"; sourceTree = "<group>"; };
-		A8BFE83818C96ACA002853CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A8BFE83A18C96ACA002853CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8BFE83C18C96ACA002853CD /* Bubble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bubble-Prefix.pch"; sourceTree = "<group>"; };
 		A8BFE83D18C96ACA002853CD /* QFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFAppDelegate.h; sourceTree = "<group>"; };
 		A8BFE83E18C96ACA002853CD /* QFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFAppDelegate.m; sourceTree = "<group>"; };
-		A8BFE84118C96ACA002853CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8BFE84318C96ACA002853CD /* QFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFViewController.h; sourceTree = "<group>"; };
 		A8BFE84418C96ACA002853CD /* QFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFViewController.m; sourceTree = "<group>"; };
 		A8BFE84618C96ACA002853CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -93,6 +101,8 @@
 			children = (
 				A8BFE84318C96ACA002853CD /* QFViewController.h */,
 				A8BFE84418C96ACA002853CD /* QFViewController.m */,
+				A8B81AE018CB0461007E6E8C /* QFPlistTableViewController.h */,
+				A8B81AE118CB0461007E6E8C /* QFPlistTableViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -166,9 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				A8BFE83618C96ACA002853CD /* Bubble-Info.plist */,
-				A8BFE83718C96ACA002853CD /* InfoPlist.strings */,
 				A8BFE83A18C96ACA002853CD /* main.m */,
 				A8BFE83C18C96ACA002853CD /* Bubble-Prefix.pch */,
+				A8BB2C9718CA256E00E7C417 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A8BFE82218C96ACA002853CD;
 			productRefGroup = A8BFE82C18C96ACA002853CD /* Products */;
@@ -269,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8BFE84718C96ACA002853CD /* Images.xcassets in Resources */,
-				A8BFE83918C96ACA002853CD /* InfoPlist.strings in Resources */,
+				A8BB2C9518CA256E00E7C417 /* Localizable.strings in Resources */,
 				A8BFE84218C96ACA002853CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +306,7 @@
 				A8BFE83F18C96ACA002853CD /* QFAppDelegate.m in Sources */,
 				A85F903E18C9A08600E4A236 /* NSObject+api.m in Sources */,
 				A85F903818C98F6000E4A236 /* NSObject+param.m in Sources */,
+				A8B81AE218CB0461007E6E8C /* QFPlistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,18 +329,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A8BFE83718C96ACA002853CD /* InfoPlist.strings */ = {
+		A8BB2C9718CA256E00E7C417 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A8BFE83818C96ACA002853CD /* en */,
+				A8BB2C9618CA256E00E7C417 /* Base */,
+				A8BB2C9818CA257F00E7C417 /* en */,
+				A8BB2C9918CA258000E7C417 /* zh-Hans */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		A8BFE84018C96ACA002853CD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A8BFE84118C96ACA002853CD /* Base */,
+				A8BB2C7F18CA20A000E7C417 /* en */,
+				A8BB2C8F18CA24C800E7C417 /* zh-Hans */,
+				A8BB2C9A18CAEE1200E7C417 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -337,6 +353,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A8BFE85718C96ACA002853CD /* en */,
+				A8BB2C9218CA24C800E7C417 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -425,9 +442,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bubble/Bubble-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Bubble/Bubble-Info.plist";
+				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C83FB7E5-97EC-475B-BF6F-5858806ED4B6";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -439,9 +460,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bubble/Bubble-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "Bubble/Bubble-Info.plist";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C83FB7E5-97EC-475B-BF6F-5858806ED4B6";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

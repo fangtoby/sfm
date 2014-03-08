@@ -40,7 +40,7 @@
 	return NO;
 }
 
--(BOOL)writeToFile:(NSMutableDictionary *) mdic fileName:(NSString *) fileName
+-(BOOL)writeToFile:(NSDictionary *) mdic fileName:(NSString *) fileName
 {
 	NSString *filePath = [self getDocumentsPath:fileName];
 	NSLog(@"%@",filePath);
@@ -55,12 +55,12 @@
 	return [mdic writeToFile:filePath atomically:YES];
 }
 
--(NSMutableDictionary *)getLocalDataByName:(NSString *) fileName
+-(NSDictionary *)getLocalDataByName:(NSString *) fileName
 {
 	NSString *filePath = [self getDocumentsPath:fileName];
-	NSMutableDictionary *data;
+	NSDictionary *data;
 	if ([self fileExist:filePath]) {
-		data = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+		data = [[NSDictionary alloc] initWithContentsOfFile:filePath];
 	}
 	return data;
 }

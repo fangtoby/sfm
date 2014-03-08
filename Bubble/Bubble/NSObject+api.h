@@ -10,8 +10,8 @@
 
 @interface Api:NSObject
 
--(NSMutableDictionary *)rootApiCall:(NSString *) location;
+-(NSDictionary *)rootApiCall:(NSString *) location;
 
--(NSMutableDictionary *)apiGetWordList;
+-(NSDictionary *)apiGetWordList;
 
 @end
