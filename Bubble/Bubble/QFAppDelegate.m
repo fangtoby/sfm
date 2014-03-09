@@ -9,24 +9,29 @@
 #import "QFAppDelegate.h"
 #import "NSObject+util.h"
 #import "NSObject+api.h"
+#import "NSObject+param.h"
 
 
 @implementation QFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	NSArray *arr = @[ @1, @3, @8];
+	NSLog(@"%@",arr[1]);
+	
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		
 		if ([self getData]) {
 			dispatch_async(dispatch_get_main_queue(), ^{
-				[[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshStatus" object:NSLocalizedString(@"Success",nil)];
+				NSNOTIFICATION(@"success");
+				//[[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshStatus" object:NSLocalizedString(@"Success",nil)];
 			});
 		}else{
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshStatus" object:NSLocalizedString(@"Failure",nil)];
+			NSNOTIFICATION(@"Failure");
 		}
 		
 	});
-    return YES;
+	return YES;
 }
 
 -(BOOL)getData
@@ -37,25 +42,26 @@
 	Api *api = [Api alloc];
 	Util *util = [Util alloc];
 	NSString *fileName = @"word.plist";
-	NSDictionary *data;
+	NSDictionary *ndata;
 	
-	
-	if ([util fileExist:[util getDocumentsPath:fileName]]) {
-		data = [util getLocalDataByName:fileName];
-		NSLog(@"local data : %@",data);
-	}else{
-		data = [api apiGetWordList];
-		if ([data count]) {
-			if ([util writeToFile:data fileName:fileName]) {
-				NSLog(@"loc data: %@",[util getLocalDataByName:fileName]);
-			}else{
-				NSLog(@"wirte local error , net data: %@",data);
+	ndata = [api apiGetWordList];
+	if ([ndata count]) {
+		if ([util fileExist:[util getDocumentsPath:fileName]]) {
+			NSDictionary *data = [util getLocalDataByName:fileName];
+			if (!([[data objectForKey:@"version"] isEqualToString:[ndata objectForKey:@"version"]]) || [data count] != [ndata count]) {
+				if ([util writeToFile:ndata fileName:fileName]) {
+					NSLog(@"local new data: %@",[util getLocalDataByName:fileName]);
+				}else{
+					NSLog(@"wirte local error , net data: %@",data);
+				}
 			}
-		} else {
-			NSLog(@"array size is null");
-			return NO;
+			if ([data count]) {
+				NSLog(@"local data : %@",data);
+			}
 		}
-		
+	}else {
+		NSLog(@"array size is null");
+		return NO;
 	}
 	return YES;
 }

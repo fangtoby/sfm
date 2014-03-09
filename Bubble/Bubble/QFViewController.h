@@ -18,6 +18,8 @@
 
 @property (nonatomic) BOOL animated;
 
+@property (retain,nonatomic) UIActivityIndicatorView *writing;
+
 -(void)refreshStatusLabel:(NSNotification *)notification;
 
 - (IBAction)removeAnimate:(id)sender;

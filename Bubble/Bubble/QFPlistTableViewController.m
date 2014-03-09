@@ -30,6 +30,7 @@
 	self.theDic = [util getLocalDataByName:@"word.plist"];
 	self.theKeys = [[self.theDic allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	NSLog(@"The Keys: %@",self.theKeys);
+	
     [super viewDidLoad];
 	
     // Uncomment the following line to preserve selection between presentations.
