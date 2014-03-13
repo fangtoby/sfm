@@ -20,7 +20,7 @@
                                 <rect key="frame" x="37" y="36" width="100" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" patternImage="48B71565-B00B-490A-8A0B-814B7623D1A5" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="F259DF4C-8C10-430E-B40D-07E087F39827" colorSpace="pattern"/>
                                     <color key="titleShadowColor" red="0.388721809863662" green="0.83022673229999999" blue="0.35261194449143823" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -51,6 +51,10 @@
                                     <segue destination="IKa-J2-csL" kind="modal" modalTransitionStyle="coverVertical" id="LQe-V7-8Fs"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayF-U0-K1t">
+                                <rect key="frame" x="48" y="233" width="224" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.76826314023603159" green="0.98808305339986946" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,6 +67,7 @@
                         <outlet property="animateRemove" destination="to0-6F-Gom" id="om4-8b-CCb"/>
                         <outlet property="animateView" destination="krF-si-w7A" id="yQh-6E-CTV"/>
                         <outlet property="sourceStatus" destination="Ru1-Ae-WN1" id="6cW-37-Ryi"/>
+                        <outlet property="transform" destination="ayF-U0-K1t" id="Onb-Ur-scv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -99,7 +104,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="48B71565-B00B-490A-8A0B-814B7623D1A5" width="256" height="256">
+        <image name="F259DF4C-8C10-430E-B40D-07E087F39827" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

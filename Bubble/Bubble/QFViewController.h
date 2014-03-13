@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *animateRemove;
 
+@property (strong, nonatomic) IBOutlet UIView *transform;
+
 @property (nonatomic) BOOL animated;
 
 @property (retain,nonatomic) UIActivityIndicatorView *writing;

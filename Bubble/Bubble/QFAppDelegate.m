@@ -16,29 +16,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	NSArray *arr = @[ @1, @3, @8];
-	NSLog(@"%@",arr[1]);
-	
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		
+	BACK(^{
 		if ([self getData]) {
-			dispatch_async(dispatch_get_main_queue(), ^{
+			MAIN(^{
 				NSNOTIFICATION(@"success");
-				//[[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshStatus" object:NSLocalizedString(@"Success",nil)];
 			});
 		}else{
 			NSNOTIFICATION(@"Failure");
 		}
-		
 	});
 	return YES;
 }
 
 -(BOOL)getData
 {
-#ifdef DEBUG
-	NSLog(@"in debug");
-#endif
 	Api *api = [Api alloc];
 	Util *util = [Util alloc];
 	NSString *fileName = @"word.plist";

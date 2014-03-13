@@ -16,6 +16,12 @@
 
 -(BOOL)fileExist:(NSString *) path;
 
+-(BOOL)fileRemove:(NSString *) fileName;
+
+-(BOOL)fileCreate:(NSString *) fileName;
+
+-(BOOL)directoryCreate:(NSString *) directoryName;
+
 -(BOOL)writeToFile:(NSDictionary *) mdic fileName:(NSString *) fileName;
 
 -(NSDictionary *)getLocalDataByName:(NSString *) fileName;

@@ -25,6 +25,7 @@
 		A8BFE85018C96ACA002853CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BFE83218C96ACA002853CD /* UIKit.framework */; };
 		A8BFE85818C96ACA002853CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8BFE85618C96ACA002853CD /* InfoPlist.strings */; };
 		A8BFE85A18C96ACA002853CD /* BubbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BFE85918C96ACA002853CD /* BubbleTests.m */; };
+		A8D1CDE518CDA4F200B8C7AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D1CDE418CDA4F200B8C7AE /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A8BFE85518C96ACA002853CD /* BubbleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BubbleTests-Info.plist"; sourceTree = "<group>"; };
 		A8BFE85718C96ACA002853CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A8BFE85918C96ACA002853CD /* BubbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleTests.m; sourceTree = "<group>"; };
+		A8D1CDE418CDA4F200B8C7AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D1CDE518CDA4F200B8C7AE /* QuartzCore.framework in Frameworks */,
 				A8BFE83118C96ACA002853CD /* CoreGraphics.framework in Frameworks */,
 				A8BFE83318C96ACA002853CD /* UIKit.framework in Frameworks */,
 				A8BFE82F18C96ACA002853CD /* Foundation.framework in Frameworks */,
@@ -152,6 +155,7 @@
 		A8BFE82D18C96ACA002853CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8D1CDE418CDA4F200B8C7AE /* QuartzCore.framework */,
 				A8BFE82E18C96ACA002853CD /* Foundation.framework */,
 				A8BFE83018C96ACA002853CD /* CoreGraphics.framework */,
 				A8BFE83218C96ACA002853CD /* UIKit.framework */,

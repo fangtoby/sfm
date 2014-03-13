@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+util.h"
+#import "NSObject+param.h"
 
 @implementation Util
 
@@ -40,6 +41,33 @@
 	return NO;
 }
 
+-(BOOL)fileRemove:(NSString *) fileName
+{
+	NSString *filePath = [self getDocumentsPath:fileName];
+	if ([self fileExist:filePath]) {
+		return [NSFILEMANAGER removeItemAtPath:filePath error:nil];
+	}
+	return NO;
+}
+-(BOOL)fileCreate:(NSString *) fileName
+{
+	NSString *filePath = [self getDocumentsPath:fileName];
+	if ([self fileExist:filePath]) {
+		return YES;
+	}
+	return [NSFILEMANAGER createFileAtPath:filePath contents:nil attributes:nil];
+}
+
+-(BOOL)directoryCreate:(NSString *) directoryName
+{
+	BOOL isDir = YES;
+	NSString *dirPath = [self getDocumentsPath:directoryName];
+	if (![NSFILEMANAGER fileExistsAtPath:dirPath isDirectory:&isDir]) {
+		return [NSFILEMANAGER createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil];
+	}
+	return NO;
+}
+
 -(BOOL)writeToFile:(NSDictionary *) mdic fileName:(NSString *) fileName
 {
 	NSString *filePath = [self getDocumentsPath:fileName];
@@ -54,6 +82,7 @@
 	NSLog(msg,fileName);
 	return [mdic writeToFile:filePath atomically:YES];
 }
+
 
 -(NSDictionary *)getLocalDataByName:(NSString *) fileName
 {
